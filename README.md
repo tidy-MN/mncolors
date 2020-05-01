@@ -1,2 +1,2 @@
 # mncolors
-:bar_chart: MN brand color palettes
+:bar_chart: MN state brand color palettes
