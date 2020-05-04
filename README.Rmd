@@ -1,0 +1,125 @@
+---
+output:
+    github_document
+---
+
+```{r,include=F}
+library(mncolors)
+
+#More information can be found in the vignette, including which palettes work best for those with impaired colour vision.
+#```r
+# load the mncolors vignette
+#vignette("mncolors")
+#```
+
+```
+
+# Minnesota Color Palettes
+
+The goal of `mncolors` is to paint your data with the colors available in the MN state brand style guide (as well as a few color palettes inspired by local landscapes). Use the palettes with `ggplot2` or `plot` to give your charts some MN style.
+
+## Install
+
+To install `mncolors` from github:
+
+```{r, eval=F}
+# First install the 'devtools' package
+library(devtools)
+
+install_github("MPCA-data/mncolors")
+```
+
+## The Palettes
+
+```{r see_palettes, fig.height = 8}
+pal_names <- names(mn_palettes)
+
+
+par(mfrow=c(length(mn_palettes)/2, 2), lheight = 2, mar=rep(1, 4), adj = 0)
+
+for (i in 1:length(mn_palettes)){
+    viz_palette(mn_palettes[[i]], pal_names[i])
+}
+```
+
+
+## Examples
+
+In a ggplot use the MN palettes with the `scale_fill_mn()` and `scale_color_mn()` functions.
+
+```{r}
+library(mncolors)
+library(ggplot2)
+
+ggplot(data = mpg) +   
+   geom_point(aes(x = displ, y = hwy, color = class), size = 6, alpha = 0.7) +
+   scale_color_mn(palette = "extended", reverse = TRUE)
+
+
+ggplot(diamonds) + 
+  geom_bar(aes(x = cut, fill = clarity)) +
+  scale_fill_mn(palette = "accent")
+
+```
+
+
+Alternatively, use`mncolors(palette = "...")` to feed MN colors to the default ggplot functions.
+
+```{r}
+library(ggplot2)
+library(hexbin)
+
+# Heat map
+dat <- data.frame(x = rnorm(10000), y = rnorm(10000))
+
+ggplot(dat, aes(x = x, y = y)) +
+    geom_hex() + 
+    coord_fixed() +
+    scale_fill_gradientn(colors = mncolors(120, palette = "primary"))
+
+
+```
+
+
+## Lots of colors!
+```{r, eval=T}
+mncolors(10, "blue")
+```
+
+
+```{r, fig.height=3, echo=F}
+#Use RColorBrewer code to demo the palettes
+n = 12
+
+image(
+   1:n, 1, as.matrix(1:n),
+   col = mncolors(n, palette = "blue"),
+   xlab = "mncolors(blue)", ylab = "", xaxt = "n", yaxt = "n", bty = "n"
+)
+```
+
+
+```{r, eval=F}
+mncolors(100, "green")
+```
+
+```{r, fig.height=3, echo=F}
+image(
+   1:n, 1, as.matrix(1:n),
+   col = mncolors(n, palette = "green"),
+   xlab = "mncolors(green)", ylab = "", xaxt = "n", yaxt = "n", bty = "n"
+)
+```
+
+
+
+In this example we use the `accent` palette directly via the `colorRampPalette()` function for base plot folks. 
+
+```{r}
+## basic example code
+pal <- colorRampPalette(mn_palettes[["accent"]])
+
+image(volcano, col = pal(20))
+```
+
+
