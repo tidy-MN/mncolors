@@ -12,8 +12,8 @@ primary(n, alpha = 1, begin = 0, end = 1, direction = 1)
 \arguments{
 \item{n}{The number of colors (\eqn{\ge 1}) to be in the palette.}
 
-\item{palette}{A character string indicating the MN palette. Seven
-options are available: "primary", "accent", "extended", "blue", "green", "gray", "safety".}
+\item{palette}{A character string indicating the MN palette. The
+options available are: "primary", "accent", "extended", "blue", "green", "gray", "safety", "treefrog".}
 
 \item{alpha}{The alpha transparency, a number in [0,1], see argument alpha in
 \code{\link[grDevices]{hsv}}.}

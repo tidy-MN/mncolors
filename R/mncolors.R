@@ -6,8 +6,8 @@
 #'
 #' @param n The number of colors (\eqn{\ge 1}) to be in the palette.
 #'
-#' @param palette A character string indicating the MN palette. Seven
-#' options are available: "primary", "accent", "extended", "blue", "green", "gray", "safety".
+#' @param palette A character string indicating the MN palette. The
+#' options available are: "primary", "accent", "extended", "blue", "green", "gray", "safety", "treefrog".
 #'
 #' @param alpha	The alpha transparency, a number in [0,1], see argument alpha in
 #' \code{\link[grDevices]{hsv}}.

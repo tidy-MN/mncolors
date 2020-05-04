@@ -20,9 +20,11 @@ remotes::install_github("MPCA-data/mncolors")
 
 ## The Palettes
 
+There are currently 8: primary, accent, extended, blue, green, gray,
+safety, treefrog, and *trout (coming soon…)*.
+
 ``` r
 pal_names <- names(mn_palettes)
-
 
 par(mfrow=c(length(mn_palettes)/2, 2), lheight = 2, mar=rep(1, 4), adj = 0)
 

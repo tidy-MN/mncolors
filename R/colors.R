@@ -75,14 +75,14 @@ mn_palettes <- list(
         "#E57200"  # orange
     ),
 
- ## Jumping Frog (John Olsen, 1982)
- ## http://cdn.artserieshotels.com.au/images/made/images/remote/http_cdn.artserieshotels.com.au/images/uploads/main/john-olsen-artist-artwork1_600_400_60.jpg
- jumping_frog = c(
-     "#607848",
-     "#184848",
-     "#c0c030",
-     "#a8a890",
-     "#90a878"
+ ## MN Gray Tree Frog
+ ## http://minnesotaseasons.com/Amphibians/Small/treefrog_(Hyla_sp)_02s.jpg
+ treefrog = c(
+     "#53412B",
+     "#474F27",
+     "#96B02C",
+     "#94AD81",
+     "#BFC453"
  ))
 
 
