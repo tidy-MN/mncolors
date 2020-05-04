@@ -2,9 +2,10 @@
 # Minnesota Color Palettes
 
 The goal of `mncolors` is to paint your data with the colors available
-in the MN state brand style guide (as well as a few color palettes
-inspired by local landscapes). Use the palettes with `ggplot2` or `plot`
-to give your charts some MN style.
+in the [MN state brand style
+guide](https://mn.gov/portal/brand/style-guide/colors/), as well as a
+few color palettes inspired by local landscapes. Use the palettes with
+`ggplot2` or `plot` to give your charts some MN style.
 
 ## Install
 
