@@ -15,7 +15,7 @@ To install `mncolors` from github:
 # First install the 'devtools' package
 library(devtools)
 
-install_github("MPCA-data/mncolors")
+remotes::install_github("MPCA-data/mncolors")
 ```
 
 ## The Palettes
@@ -42,23 +42,34 @@ In a ggplot use the MN palettes with the `scale_fill_mn()` and
 library(mncolors)
 library(ggplot2)
 
+# Primary
 ggplot(data = mpg) +   
    geom_point(aes(x = displ, y = hwy, color = class), size = 6, alpha = 0.7) +
-   scale_color_mn(palette = "extended", reverse = TRUE)
+   scale_color_mn(palette = "primary", reverse = TRUE)
 ```
 
 ![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
 ``` r
+# Extended
+ggplot(data = mpg) +   
+   geom_point(aes(x = displ, y = hwy, color = class), size = 6, alpha = 0.7) +
+   scale_color_mn(palette = "extended")
+```
+
+![](README_files/figure-gfm/unnamed-chunk-3-2.png)<!-- -->
+
+``` r
+# Accent
 ggplot(diamonds) + 
   geom_bar(aes(x = cut, fill = clarity)) +
   scale_fill_mn(palette = "accent")
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-3-2.png)<!-- -->
+![](README_files/figure-gfm/unnamed-chunk-3-3.png)<!-- -->
 
-Alternatively, use`mncolors(palette = "...")` to feed MN colors to the
-default ggplot functions.
+Alternatively, use`mncolors()` to feed MN colors to the default ggplot
+functions.
 
 ``` r
 library(ggplot2)
@@ -76,6 +87,8 @@ ggplot(dat, aes(x = x, y = y)) +
 ![](README_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 ## Lots of colors\!
+
+Enter any number you want to `mncolors()` to return a bucket of colors.
 
 ``` r
 mncolors(10, "blue")
