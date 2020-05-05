@@ -24,16 +24,47 @@ There are currently 8: primary, accent, extended, blue, green, gray,
 safety, treefrog, and *trout (coming soon…)*.
 
 ``` r
-pal_names <- names(mn_palettes)
+library(mncolors)
 
 par(mfrow=c(length(mn_palettes)/2, 2), lheight = 2, mar=rep(1, 4), adj = 0)
 
-for (i in 1:length(mn_palettes)){
-    viz_palette(mn_palettes[[i]], pal_names[i])
-}
+for (i in 1:length(mn_palettes)) viz_palette(mn_palettes[[i]], names(mn_palettes)[i])
 ```
 
 ![](README_files/figure-gfm/see_palettes-1.png)<!-- -->
+
+<br>
+
+More specifically:
+
+``` r
+mn_palettes
+```
+
+    ## $primary
+    ##   MN Blue  MN Green 
+    ## "#003865" "#78BE21" 
+    ## 
+    ## $accent
+    ## [1] "#008EAA" "#0D5257" "#8D3F2B" "#5D295F" "#53565A"
+    ## 
+    ## $extended
+    ## [1] "#A4BCC2" "#F5E1A4" "#9BCBEB" "#FFC845"
+    ## 
+    ## $blue
+    ## [1] "#D9D9D6" "#A4BCC2" "#9BCBEB" "#008EAA" "#003865"
+    ## 
+    ## $green
+    ## [1] "#D9D9D6" "#A4BCC2" "#0D5257" "#78BE21"
+    ## 
+    ## $gray
+    ## [1] "#53565A" "#97999B" "#D9D9D6"
+    ## 
+    ## $safety
+    ## [1] "#A6192E" "#E57200"
+    ## 
+    ## $treefrog
+    ## [1] "#53412B" "#474F27" "#96B02C" "#94AD81" "#BFC453"
 
 ## Examples
 
