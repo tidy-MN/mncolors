@@ -60,7 +60,7 @@ mn_palettes <- list(
         "#D9D9D6", # light gray
         "#A4BCC2", # blue gray
         "#0D5257", # greenish
-        "#78BE21" # MN green
+        "#78BE21"  # MN green
     ),
 
     gray = c(
@@ -69,10 +69,14 @@ mn_palettes <- list(
         "#D9D9D6"  # light
     ),
 
-
     safety = c(
         "#A6192E", # red
         "#E57200"  # orange
+    ),
+
+    corn = c(
+        "#78BE21", # MN green
+        "#FFC845"  # gold
     ),
 
  ## MN Gray Tree Frog
@@ -83,7 +87,16 @@ mn_palettes <- list(
      "#96B02C",
      "#94AD81",
      "#BFC453"
- ))
+ ),
 
-
+ ## MN Crayfish
+ ## https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS7Db_F7XNVm2vCTDAJh25Cf2WRZAffl5hWdCcCHxbpyQQSA-Cp&usqp=CAU
+ crayfish = c(
+     "#832D12",
+     "#34424A",
+     "#6C5E2E",
+     "#AB8237",
+     "#5493AA"
+ )
+ )
 

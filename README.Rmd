@@ -31,9 +31,9 @@ remotes::install_github("MPCA-data/mncolors")
 
 ## The Palettes
 
-There are currently 8: primary, accent, extended, blue, green, gray, safety, treefrog, and _trout (coming soon...)_.
+There are currently 10: primary, corn, accent, extended, blue, green, gray, safety, treefrog, caryfish, and _trout (coming soon...)_.
 
-```{r see_palettes, fig.height = 8}
+```{r see_palettes, echo=F, fig.height=9}
 library(mncolors)
 
 par(mfrow=c(length(mn_palettes)/2, 2), lheight = 2, mar=rep(1, 4), adj = 0)
@@ -43,7 +43,7 @@ for (i in 1:length(mn_palettes)) viz_palette(mn_palettes[[i]], names(mn_palettes
 
 <br>
 
-More specifically:
+**More specifically:**
 
 ```{r list_palettes}
 mn_palettes
@@ -74,6 +74,11 @@ ggplot(data = mpg) +
 ggplot(diamonds) + 
   geom_bar(aes(x = cut, fill = clarity)) +
   scale_fill_mn(palette = "accent")
+
+# Crayfish
+ggplot(diamonds) + 
+  geom_col(aes(y = mean(price), x = cut, fill = cut)) +
+  scale_fill_mn(palette = "crayfish")
 
 ```
 

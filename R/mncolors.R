@@ -82,10 +82,12 @@ mncolors <- function(n, palette = "primary", alpha = 1, begin = 0, end = 1, dire
     end <- tmp
   }
 
-
   map_cols <- mn_palettes[[tolower(palette)]]
+
   fn_cols <- grDevices::colorRamp(map_cols, space = "Lab", interpolate = "spline")
+
   cols <- fn_cols(seq(begin, end, length.out = n)) / 255
+
   grDevices::rgb(cols[, 1], cols[, 2], cols[, 3], alpha = alpha)
 } # nocov end
 

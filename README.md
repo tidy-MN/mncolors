@@ -20,22 +20,14 @@ remotes::install_github("MPCA-data/mncolors")
 
 ## The Palettes
 
-There are currently 8: primary, accent, extended, blue, green, gray,
-safety, treefrog, and *trout (coming soon…)*.
-
-``` r
-library(mncolors)
-
-par(mfrow=c(length(mn_palettes)/2, 2), lheight = 2, mar=rep(1, 4), adj = 0)
-
-for (i in 1:length(mn_palettes)) viz_palette(mn_palettes[[i]], names(mn_palettes)[i])
-```
+There are currently 10: primary, corn, accent, extended, blue, green,
+gray, safety, treefrog, caryfish, and *trout (coming soon…)*.
 
 ![](README_files/figure-gfm/see_palettes-1.png)<!-- -->
 
 <br>
 
-More specifically:
+**More specifically:**
 
 ``` r
 mn_palettes
@@ -63,8 +55,14 @@ mn_palettes
     ## $safety
     ## [1] "#A6192E" "#E57200"
     ## 
+    ## $corn
+    ## [1] "#78BE21" "#FFC845"
+    ## 
     ## $treefrog
     ## [1] "#53412B" "#474F27" "#96B02C" "#94AD81" "#BFC453"
+    ## 
+    ## $crayfish
+    ## [1] "#832D12" "#34424A" "#6C5E2E" "#AB8237" "#5493AA"
 
 ## Examples
 
@@ -100,6 +98,15 @@ ggplot(diamonds) +
 ```
 
 ![](README_files/figure-gfm/unnamed-chunk-3-3.png)<!-- -->
+
+``` r
+# Crayfish
+ggplot(diamonds) + 
+  geom_col(aes(y = mean(price), x = cut, fill = cut)) +
+  scale_fill_mn(palette = "crayfish")
+```
+
+![](README_files/figure-gfm/unnamed-chunk-3-4.png)<!-- -->
 
 Alternatively, use`mncolors()` to feed MN colors to the default ggplot
 functions.

@@ -1,7 +1,7 @@
 Package: mncolors
 Title: Minnesota Color Palettes
 Version: 0.0.0.9027
-Authors@R: c(person("You", "Help me?", role = c("aut")),
+Authors@R: c(person("Help", "me?", role = c("aut")),
              person("Dorian", "Kvale", role = c("aut", "cre"),
                     email = "Dorian.Kvale@state.mn.us"))
 Description: State branded color palettes.
