@@ -12,8 +12,10 @@ Use the palettes with `ggplot2` or `plot` to give your charts some MN style.
 To install `mncolors` from github:
 
 ``` r
-# First install the 'devtools' package
-library(devtools)
+# First install the 'remotes' package
+install.packages("remotes")
+
+library(remotes)
 
 remotes::install_github("MPCA-data/mncolors")
 ```
