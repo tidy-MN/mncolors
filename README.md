@@ -1,5 +1,5 @@
 
-# Minnesota Color Palettes
+# MN Color Palettes
 
 The goal of `mncolors` is to paint your data with colors from the [MN state brand style
 guide](https://mn.gov/portal/brand/style-guide/colors/), plus a
@@ -17,6 +17,7 @@ install.packages("remotes")
 
 library(remotes)
 
+# Now you can install mncolors from github
 remotes::install_github("MPCA-data/mncolors")
 ```
 
