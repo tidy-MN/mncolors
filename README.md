@@ -19,6 +19,7 @@ library(remotes)
 
 # Now you can install mncolors from github
 remotes::install_github("MPCA-data/mncolors")
+
 ```
 
 ## The Palettes
@@ -159,3 +160,4 @@ image(volcano, col = pal(20))
 ```
 
 ![](README_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
+
