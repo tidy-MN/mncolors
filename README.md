@@ -1,9 +1,9 @@
 
 # MN Color Palettes
 
-The goal of `mncolors` is to paint your data with colors from the [MN state brand style
-guide](https://mn.gov/portal/brand/style-guide/colors/), plus a
-few color palettes inspired by local landscapes and creatures like treefrogs and crayfish. 
+Use the `mncolors` package to paint your data with colors from the [MN state brand style
+guide](https://mn.gov/portal/brand/style-guide/colors/), and a
+few color palettes inspired by local landscapes and animals, such as tree frogs and crayfish. 
 
 Use the palettes with `ggplot2` or `plot` to give your charts some MN style.
 
