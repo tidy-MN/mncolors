@@ -14,21 +14,28 @@ library(mncolors)
 
 ```
 
-# Minnesota Color Palettes
+# MN Color Palettes
 
-The goal of `mncolors` is to paint your data with the colors available in the [MN state brand style guide](https://mn.gov/portal/brand/style-guide/colors/), as well as a few color palettes inspired by local landscapes. Use the palettes with `ggplot2` or `plot` to give your charts some MN style.
+Use the `mncolors` package to paint your data with colors from the [MN state brand style
+guide](https://mn.gov/portal/brand/style-guide/colors/), and a
+few color palettes inspired by local landscapes and animals, such as tree frogs and crayfish. 
+
+Use the palettes with `ggplot2` or `plot` to give your charts some MN style.
 
 ## Install
 
-To install `mncolors` from github:
+To install `mncolors`:
 
-```{r, eval=F}
-# First install the 'devtools' package
-library(devtools)
+``` r
+# First install the 'remotes' package
+install.packages("remotes")
 
+library(remotes)
+
+# Now you can install mncolors from github
 remotes::install_github("MPCA-data/mncolors")
-```
 
+``
 ## The Palettes
 
 There are currently 10: primary, corn, accent, extended, blue, green, gray, safety, treefrog, caryfish, and _trout (coming soon...)_.

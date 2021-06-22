@@ -9,7 +9,7 @@ Use the palettes with `ggplot2` or `plot` to give your charts some MN style.
 
 ## Install
 
-To install `mncolors` from github:
+To install `mncolors`:
 
 ``` r
 # First install the 'remotes' package
