@@ -15,8 +15,6 @@ To install `mncolors`:
 # First install the 'remotes' package
 install.packages("remotes")
 
-library(remotes)
-
 # Now you can install mncolors from github
 remotes::install_github("MPCA-data/mncolors")
 
