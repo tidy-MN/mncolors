@@ -22,8 +22,8 @@ remotes::install_github("MPCA-data/mncolors")
 
 ## The Palettes
 
-There are currently 10: primary, corn, accent, extended, blue, green,
-gray, safety, treefrog, caryfish, and *trout (coming soon…)*.
+There are currently 10: primary, accent, extended, blue, green,
+gray, safety, corn, tree frog, and crayfish.
 
 ![](README_files/figure-gfm/see_palettes-1.png)<!-- -->
 
