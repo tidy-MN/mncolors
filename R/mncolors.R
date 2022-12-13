@@ -1,13 +1,11 @@
 #' MN color palette maps
 #'
-#' This function creates a vector of \code{n} equally spaced colors along a
-#' MN color palette.
-#'
+#' This function creates a vector of \code{n} equally spaced colors along a MN color palette.
 #'
 #' @param n The number of colors (\eqn{\ge 1}) to be in the palette.
 #'
 #' @param palette A character string indicating the MN palette. The
-#' options available are: "primary", "accent", "extended", "blue", "green", "gray", "safety", "treefrog".
+#' options available are: "primary", "accent", "extended", "blue", "green", "gray", "safety", "primary_accent", "primary_extended", "primary_accent_extended", "corn", "treefrog", "crayfish".
 #'
 #' @param alpha	The alpha transparency, a number in [0,1], see argument alpha in
 #' \code{\link[grDevices]{hsv}}.
@@ -51,7 +49,7 @@
 #'
 #' ggplot(dat, aes(x = x, y = y)) +
 #'   geom_hex() + coord_fixed() +
-#'   scale_fill_gradientn(colours = mncolors(256, palette = "primary"))
+#'   scale_fill_gradientn(colours = mncolors(256, palette = "primary_extended"))
 #'
 #' # using code from RColorBrewer to demo the palette
 #' n = 200
@@ -91,10 +89,9 @@ mncolors <- function(n, palette = "primary", alpha = 1, begin = 0, end = 1, dire
   grDevices::rgb(cols[, 1], cols[, 2], cols[, 3], alpha = alpha)
 } # nocov end
 
-
 #' @rdname mncolors
 #' @export
 primary <- function(n, alpha = 1, begin = 0, end = 1, direction = 1) {
-  mncolors(n, palette = "primary", alpha, begin, end, direction)
+  mncolors(n, palette = "primary_extended", alpha, begin, end, direction)
 }
 

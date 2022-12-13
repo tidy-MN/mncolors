@@ -4,7 +4,7 @@
 \alias{mn_pal}
 \title{MN palettes with ramped colours}
 \usage{
-mn_pal(palette = "mn_qual", alpha = 1, reverse = FALSE)
+mn_pal(palette = "primary_extended", alpha = 1, reverse = FALSE)
 }
 \arguments{
 \item{palette}{Choose from 'mn_palettes' list}

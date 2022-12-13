@@ -13,7 +13,9 @@
 #' filled.contour(volcano,color.palette = mn_pal(), asp=1)
 #'
 #' @export
-mn_pal <- function(palette="mn_qual", alpha = 1, reverse = FALSE) {
+mn_pal <- function(palette = "primary_extended", 
+                   alpha = 1, 
+                   reverse = FALSE) {
     pal <- mn_palettes[[palette]]
     if (reverse){
         pal <- rev(pal)
@@ -35,8 +37,6 @@ mn_pal <- function(palette="mn_qual", alpha = 1, reverse = FALSE) {
 #'
 #' @param ... additional arguments to pass to scale_color_gradientn
 #'
-#' @inheritParams viridis::scale_color_viridis
-#'
 #' @importFrom ggplot2 scale_colour_manual
 #'
 #' @examples
@@ -55,7 +55,7 @@ mn_pal <- function(palette="mn_qual", alpha = 1, reverse = FALSE) {
 #' @export
 #'
 #' @importFrom ggplot2 discrete_scale scale_color_gradientn
-scale_color_mn <- function(palette = "mn_qual",
+scale_color_mn <- function(palette = "primary_extended",
                            discrete = TRUE, 
                            alpha = 1, 
                            reverse = FALSE,
@@ -76,7 +76,6 @@ scale_colour_mn <- scale_color_mn
 #'
 #' @param palette Choose from 'mn_palettes' list
 #'
-#' @inheritParams viridis::scale_fill_viridis
 #' @inheritParams mn_pal
 #'
 #' @param discrete whether to use a discrete colour palette
@@ -86,9 +85,9 @@ scale_colour_mn <- scale_color_mn
 #' @importFrom ggplot2 scale_fill_manual discrete_scale scale_fill_gradientn
 #'
 #' @export
-scale_fill_mn <- function(palette="mn_qual",
+scale_fill_mn <- function(palette="primary_extended",
                           discrete = TRUE, 
-                          alpha=1, 
+                          alpha = 1, 
                           reverse = FALSE,
                           ...) {
     if (discrete) {

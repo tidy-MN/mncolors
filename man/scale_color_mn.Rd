@@ -6,24 +6,22 @@
 \title{Setup colour palette for ggplot2}
 \usage{
 scale_color_mn(
-  ...,
-  palette = "mn_qual",
+  palette = "primary_extended",
   discrete = TRUE,
   alpha = 1,
-  reverse = FALSE
+  reverse = FALSE,
+  ...
 )
 
 scale_colour_mn(
-  ...,
-  palette = "mn_qual",
+  palette = "primary_extended",
   discrete = TRUE,
   alpha = 1,
-  reverse = FALSE
+  reverse = FALSE,
+  ...
 )
 }
 \arguments{
-\item{...}{additional arguments to pass to scale_color_gradientn}
-
 \item{palette}{Choose from 'mn_palettes' list}
 
 \item{discrete}{whether to use a discrete colour palette}
@@ -31,6 +29,8 @@ scale_colour_mn(
 \item{alpha}{transparency}
 
 \item{reverse}{logical, Reverse the order of the colours?}
+
+\item{...}{additional arguments to pass to scale_color_gradientn}
 }
 \description{
 Setup colour palette for ggplot2

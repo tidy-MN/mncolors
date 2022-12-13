@@ -5,23 +5,23 @@
 \title{#' Setup fill palette for ggplot2}
 \usage{
 scale_fill_mn(
-  ...,
-  palette = "mn_qual",
+  palette = "primary_extended",
   discrete = TRUE,
   alpha = 1,
-  reverse = FALSE
+  reverse = FALSE,
+  ...
 )
 }
 \arguments{
-\item{...}{additional arguments to pass to scale_color_gradientn}
-
 \item{palette}{Choose from 'mn_palettes' list}
 
 \item{discrete}{whether to use a discrete colour palette}
 
-\item{alpha}{pass through parameter to \code{viridis}}
+\item{alpha}{transparency}
 
 \item{reverse}{If TRUE, the direction of the colours is reversed.}
+
+\item{...}{additional arguments to pass to scale_color_gradientn}
 }
 \description{
 #' Setup fill palette for ggplot2

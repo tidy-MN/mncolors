@@ -6,10 +6,11 @@ output:
 ```{r,include=F}
 library(mncolors)
 
-#More information can be found in the vignette, including which palettes work best for those with impaired colour vision.
+# More information can be found in the vignette, including which palettes work best for those with reduced color vision.
+
 #```r
 # load the mncolors vignette
-#vignette("mncolors")
+# vignette("mncolors")
 #```
 
 ```
@@ -30,20 +31,19 @@ To install `mncolors`:
 # First install the 'remotes' package
 install.packages("remotes")
 
-library(remotes)
-
 # Now you can install mncolors from github
 remotes::install_github("MPCA-data/mncolors")
 
-``
+```
+
 ## The Palettes
 
-There are currently 10: primary, corn, accent, extended, blue, green, gray, safety, treefrog, caryfish, and _trout (coming soon...)_.
+There are currently 13: primary, accent, extended, blue, green, gray, safety, **primary_accent**, **primary_extended**, **primary_accent_extended**, corn, treefrog, and caryfish.
 
 ```{r see_palettes, echo=F, fig.height=9}
 library(mncolors)
 
-par(mfrow=c(length(mn_palettes)/2, 2), lheight = 2, mar=rep(1, 4), adj = 0)
+par(mfrow=c(round(0.1+length(mn_palettes)/2), 2), lheight = 2, mar=rep(1, 4), adj = 0)
 
 for (i in 1:length(mn_palettes)) viz_palette(mn_palettes[[i]], names(mn_palettes)[i])
 ```
@@ -55,8 +55,6 @@ for (i in 1:length(mn_palettes)) viz_palette(mn_palettes[[i]], names(mn_palettes
 ```{r list_palettes}
 mn_palettes
 ```
-
-
 
 ## Examples
 
@@ -77,10 +75,10 @@ ggplot(data = mpg) +
    geom_point(aes(x = displ, y = hwy, color = class), size = 6, alpha = 0.7) +
    scale_color_mn(palette = "extended")
 
-# Accent
+# Primary + Accent
 ggplot(diamonds) + 
   geom_bar(aes(x = cut, fill = clarity)) +
-  scale_fill_mn(palette = "accent")
+  scale_fill_mn(palette = "primary_accent")
 
 # Crayfish
 ggplot(diamonds) + 
@@ -90,21 +88,21 @@ ggplot(diamonds) +
 ```
 
 
-Alternatively, use`mncolors()` to feed MN colors to the default ggplot functions.
+Alternatively, use`mncolors()` to feed a specific number of colors from a palette to a ggplot layer.
 
 ```{r}
 library(ggplot2)
-library(hexbin)
 
-# Heat map
-dat <- data.frame(x = rnorm(10000), y = rnorm(10000))
+df <- dplyr::starwars[1:5, ]
 
-ggplot(dat, aes(x = x, y = y)) +
-    geom_hex() + 
-    coord_fixed() +
-    scale_fill_gradientn(colors = mncolors(120, palette = "primary"))
-
-
+ggplot(df, aes(x = height, y = reorder(name, height), fill = height)) +
+    geom_col() + 
+    scale_fill_gradientn(colors = mncolors(5, palette = "primary"),) +
+  theme(legend.position = "none") +
+  labs(title = "How tall are they?",
+       subtitle = "Star Wars character heights",
+       x = "height (cm)",
+       y = "")
 ```
 
 
@@ -117,7 +115,7 @@ mncolors(10, "blue")
 
 
 ```{r, fig.height=3, echo=F}
-#Use RColorBrewer code to demo the palettes
+# RColorBrewer code to demo the palettes
 n = 10
 
 image(
@@ -143,14 +141,17 @@ image(
 ```
 
 
+## Base plots
 
-In this example we use the `accent` palette directly via the `colorRampPalette()` function for base plot folks. 
+In this example we use the `primary_accent` palette directly via the `colorRampPalette()` function. 
 
 ```{r}
-## basic example code
-pal <- colorRampPalette(mn_palettes[["accent"]])
+# Volcano example
 
-image(volcano, col = pal(20))
+## Create palette
+pal <- colorRampPalette(mn_palettes$primary_accent)
+
+## Use 50 colors from it
+image(volcano, col = pal(50))
 ```
-
 

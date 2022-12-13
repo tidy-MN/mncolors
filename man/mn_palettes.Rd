@@ -5,7 +5,7 @@
 \alias{mn_palettes}
 \title{Minnesota Color Palettes}
 \format{
-An object of class \code{list} of length 10.
+An object of class \code{list} of length 13.
 }
 \usage{
 mn_palettes

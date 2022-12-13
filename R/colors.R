@@ -74,6 +74,39 @@ mn_palettes <- list(
         "#E57200"  # orange
     ),
 
+    primary_accent = c(
+      "MN Blue"  = "#003865", # MN Blue
+      "MN Green" = "#78BE21",  # MN Green
+      "#008EAA", # teal
+      "#0D5257", # greenish
+      "#8D3F2B", # orange
+      "#5D295F", # purple
+      "#53565A"  # dark gray
+    ),
+    
+    primary_extended = c(
+      "MN Blue"  = "#003865", # MN Blue
+      "MN Green" = "#78BE21",  # MN Green
+      "#A4BCC2", # blue gray
+      "#F5E1A4", # cream
+      "#9BCBEB", # sky blue
+      "#FFC845"  # gold
+    ),
+    
+    primary_accent_extended = c(
+      "MN Blue"  = "#003865", # MN Blue
+      "MN Green" = "#78BE21",  # MN Green
+      "#008EAA", # teal
+      "#0D5257", # greenish
+      "#8D3F2B", # orange
+      "#5D295F", # purple
+      "#53565A", # dark gray
+      "#A4BCC2", # blue gray
+      "#F5E1A4", # cream
+      "#9BCBEB", # sky blue
+      "#FFC845"  # gold
+    ),
+    
     corn = c(
         "#78BE21", # MN green
         "#FFC845"  # gold

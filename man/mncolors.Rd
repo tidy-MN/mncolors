@@ -13,7 +13,7 @@ primary(n, alpha = 1, begin = 0, end = 1, direction = 1)
 \item{n}{The number of colors (\eqn{\ge 1}) to be in the palette.}
 
 \item{palette}{A character string indicating the MN palette. The
-options available are: "primary", "accent", "extended", "blue", "green", "gray", "safety", "treefrog".}
+options available are: "primary", "accent", "extended", "blue", "green", "gray", "safety", "primary_accent", "primary_extended", "primary_accent_extended", "corn", "treefrog", "crayfish".}
 
 \item{alpha}{The alpha transparency, a number in [0,1], see argument alpha in
 \code{\link[grDevices]{hsv}}.}
@@ -32,8 +32,7 @@ subsequent graphics by \code{palette(cv)}, a \code{col =} specification in
 graphics functions or in \code{par}.
 }
 \description{
-This function creates a vector of \code{n} equally spaced colors along a
-MN color palette.
+This function creates a vector of \code{n} equally spaced colors along a MN color palette.
 }
 \details{
 \if{html}{Here are the color scales:
@@ -58,7 +57,7 @@ dat <- data.frame(x = rnorm(10000), y = rnorm(10000))
 
 ggplot(dat, aes(x = x, y = y)) +
   geom_hex() + coord_fixed() +
-  scale_fill_gradientn(colours = mncolors(256, palette = "primary"))
+  scale_fill_gradientn(colours = mncolors(256, palette = "primary_extended"))
 
 # using code from RColorBrewer to demo the palette
 n = 200

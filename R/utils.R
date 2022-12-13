@@ -21,7 +21,9 @@
 #' @importFrom graphics image
 #' @importFrom grDevices colorRampPalette
 #'
-viz_palette <- function(pal, ttl = deparse(substitute(pal)), num = length(pal)) {
+viz_palette <- function(pal, 
+                        ttl = deparse(substitute(pal)),
+                        num = length(pal)) {
     if(num <= 0)
         stop("'num' should be > 0")
     pal_func <- colorRampPalette(pal)
