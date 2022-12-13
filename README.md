@@ -137,12 +137,12 @@ df <- dplyr::starwars[1:5, ]
 
 ggplot(df, aes(x = height, y = reorder(name, height), fill = height)) +
     geom_col() + 
-    scale_fill_gradientn(colors = mncolors(5, palette = "primary"),) +
-  theme(legend.position = "none") +
-  labs(title = "How tall are they?",
-       subtitle = "Star Wars character heights",
-       x = "height (cm)",
-       y = "")
+    scale_fill_gradientn(colors = mncolors(5, palette = "primary")) +
+    theme(legend.position = "none") +
+    labs(title = "How tall are they?",
+         subtitle = "Star Wars character heights",
+         x = "height (cm)",
+         y = "")
 ```
 
 ![](README_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
