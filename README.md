@@ -28,7 +28,9 @@ There are currently 13: primary, accent, extended, blue, green, gray,
 safety, **primary_accent**, **primary_extended**,
 **primary_accent_extended**, corn, treefrog, and caryfish.
 
-![](README_files/figure-gfm/see_palettes-1.png?raw=true)
+![](https://github.com/tidy-MN/mncolors/raw/main/README_files/figure-gfm/see_palettes-1.png)
+
+<img src="https://github.com/tidy-MN/mncolors/raw/main/README_files/figure-gfm/see_palettes-1.png">
 
 <br>
 
