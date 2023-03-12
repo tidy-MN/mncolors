@@ -88,7 +88,7 @@ ggplot(diamonds) +
 ```
 
 
-Alternatively, use`mncolors()` to feed a specific number of colors from a palette to a ggplot layer.
+Alternatively, use `mncolors()` to feed a specific number of colors from a palette to a ggplot layer.
 
 ```{r}
 library(ggplot2)
