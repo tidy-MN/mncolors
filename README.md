@@ -19,7 +19,7 @@ To install `mncolors`:
 install.packages("remotes")
 
 # Now you can install mncolors from github
-remotes::install_github("MPCA-data/mncolors")
+remotes::install_github("tidy-MN/mncolors")
 ```
 
 ## The Palettes
