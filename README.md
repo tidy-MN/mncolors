@@ -19,7 +19,7 @@ To install `mncolors`:
 install.packages("remotes")
 
 # Now you can install mncolors from github
-remotes::install_github("MPCA-data/mncolors")
+remotes::install_github("tidy-MN/mncolors")
 ```
 
 ## The Palettes
@@ -127,7 +127,7 @@ ggplot(diamonds) +
 
 ![](README_files/figure-gfm/unnamed-chunk-2-4.png)<!-- -->
 
-Alternatively, use`mncolors()` to feed a specific number of colors from
+Alternatively, use `mncolors()` to feed a specific number of colors from
 a palette to a ggplot layer.
 
 ``` r
