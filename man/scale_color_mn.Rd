@@ -36,16 +36,22 @@ scale_colour_mn(
 Setup colour palette for ggplot2
 }
 \examples{
-library(ggplot2)
-ggplot(mtcars, aes(mpg, wt)) +
-  geom_point(aes(colour = factor(cyl))) +
-  scale_colour_mn(palette="mn_qual")
-ggplot(mtcars, aes(mpg, wt)) +
-  geom_point(aes(colour = hp)) +
-  scale_colour_mn(palette="mn_qual", discrete = FALSE)
-ggplot(data = mpg) +
-  geom_point(mapping = aes(x = displ, y = hwy, color = class)) +
-  scale_colour_mn(palette="accent")
-ggplot(diamonds) + geom_bar(aes(x = cut, fill = clarity)) +
-  scale_fill_mn()
+library(tidyverse)
+
+ggplot(mpg, aes(hwy)) +
+  geom_bar(aes(fill = class)) +
+  scale_fill_mn(palette = "accent") 
+  
+ggplot(mtcars, aes(wt, mpg)) +
+  geom_point(aes(color = hp), size = 5, alpha = 0.9) +
+  scale_color_mn(palette = "blue", discrete = FALSE, reverse = TRUE)
+  
+ggplot(mpg) +
+  geom_point(aes(x = cty, y = hwy, color = class), size = 5, alpha = 0.7) +
+  scale_color_mn(palette = "primary_accent")
+  
+ggplot(diamonds) + 
+  geom_bar(aes(x = cut, fill = clarity)) +
+  scale_fill_mn("primary_extended")
+  
 }

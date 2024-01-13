@@ -1,28 +1,24 @@
 #' Minnesota Color Palettes
 #'
-#'A collection of color palettes inspired by the landscape and wildlife of Australia. The palettes include:
-#' mncolors
-#' mn_qual, mn_div
-#' primary
-#' accent
-#' extended
-#' grays
-#' safety
+#'A collection of color palettes based on the official state brand colors and others inspired by the landscape and wildlife of Minnesota. 
 #'
 #'@examples
 #'
 #' # Make an x-y plot using the Primary palette
 #' library(tidyverse)
+#' 
 #' df <- data.frame(x = rnorm(100, 0, 20),
 #'                 y = rnorm(100, 0, 20),
 #'                cl = sample(letters[1:8], 100, replace=T))
-#' ggplot(df, aes(x, y, colour=cl, shape=cl)) +
-#'   geom_point(size=4) + scale_color_mncolors(palette="primary") +
-#'   theme_bw() + theme(aspect.ratio=1)
+#' ggplot(df, aes(x, y, color = cl, shape=cl)) +
+#'   geom_point(size=4) + 
+#'   scale_color_mncolors(palette = "primary") +
+#'   theme_bw()
 #'
 #' # Make a histogram using the Secondary palette
-#' ggplot(df, aes(x, fill=cl)) + geom_histogram() +
-#'   scale_fill_mncolors(palette="secondary")
+#' ggplot(df, aes(x, fill=cl)) + 
+#'   geom_histogram() +
+#'   scale_fill_mncolors(palette = "secondary")
 #'
 #' @export
 mn_palettes <- list(

@@ -5,17 +5,16 @@
 #' @param n The number of colors (\eqn{\ge 1}) to be in the palette.
 #'
 #' @param palette A character string indicating the MN palette. The
-#' options available are: "primary", "accent", "extended", "blue", "green", "gray", "safety", "primary_accent", "primary_extended", "primary_accent_extended", "corn", "treefrog", "crayfish".
+#' options available are: "primary", "accent", "extended", "blue", "green", "gray", "safety", "primary_accent", "primary_extended", "primary_accent_extended", "corn", "treefrog", and "crayfish".
 #'
-#' @param alpha	The alpha transparency, a number in [0,1], see argument alpha in
+#' @param alpha	 The alpha transparency, a number in [0,1], see argument alpha in
 #' \code{\link[grDevices]{hsv}}.
 #'
 #' @param begin The (corrected) hue in [0,1] at which the colormap begins.
 #'
 #' @param end The (corrected) hue in [0,1] at which the colormap ends.
 #'
-#' @param direction Sets the order of colors in the scale. If 1, the default, colors
-#' are ordered from darkest to lightest. If -1, the order of colors is reversed.
+#' @param direction Sets the order of colors in the scale. If 1, the default, colors are ordered from darkest to lightest. If -1, the order of colors is reversed.
 #'
 #'
 #' @return \code{mncolors} returns a character vector, \code{cv}, of color hex
@@ -49,7 +48,7 @@
 #'
 #' ggplot(dat, aes(x = x, y = y)) +
 #'   geom_hex() + coord_fixed() +
-#'   scale_fill_gradientn(colours = mncolors(256, palette = "primary_extended"))
+#'   scale_fill_gradientn(colors = mncolors(256, palette = "primary_extended"))
 #'
 #' # using code from RColorBrewer to demo the palette
 #' n = 200

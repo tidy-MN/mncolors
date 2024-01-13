@@ -18,6 +18,7 @@ MN palettes with ramped colours
 }
 \examples{
 library(scales)
+
 show_col(mn_pal()(10))
 
 filled.contour(volcano,color.palette = mn_pal(), asp=1)

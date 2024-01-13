@@ -8,6 +8,7 @@
 #'
 #' @examples
 #' library(scales)
+#' 
 #' show_col(mn_pal()(10))
 #'
 #' filled.contour(volcano,color.palette = mn_pal(), asp=1)
@@ -40,18 +41,24 @@ mn_pal <- function(palette = "primary_extended",
 #' @importFrom ggplot2 scale_colour_manual
 #'
 #' @examples
-#' library(ggplot2)
-#' ggplot(mtcars, aes(mpg, wt)) +
-#'   geom_point(aes(colour = factor(cyl))) +
-#'   scale_colour_mn(palette="mn_qual")
-#' ggplot(mtcars, aes(mpg, wt)) +
-#'   geom_point(aes(colour = hp)) +
-#'   scale_colour_mn(palette="mn_qual", discrete = FALSE)
-#' ggplot(data = mpg) +
-#'   geom_point(mapping = aes(x = displ, y = hwy, color = class)) +
-#'   scale_colour_mn(palette="accent")
-#' ggplot(diamonds) + geom_bar(aes(x = cut, fill = clarity)) +
-#'   scale_fill_mn()
+#' library(tidyverse)
+#' 
+#' ggplot(mpg, aes(hwy)) +
+#'   geom_bar(aes(fill = class)) +
+#'   scale_fill_mn(palette = "accent") 
+#'   
+#' ggplot(mtcars, aes(wt, mpg)) +
+#'   geom_point(aes(color = hp), size = 5, alpha = 0.9) +
+#'   scale_color_mn(palette = "blue", discrete = FALSE, reverse = TRUE)
+#'   
+#' ggplot(mpg) +
+#'   geom_point(aes(x = cty, y = hwy, color = class), size = 5, alpha = 0.7) +
+#'   scale_color_mn(palette = "primary_accent")
+#'   
+#' ggplot(diamonds) + 
+#'   geom_bar(aes(x = cut, fill = clarity)) +
+#'   scale_fill_mn("primary_extended")
+#'   
 #' @export
 #'
 #' @importFrom ggplot2 discrete_scale scale_color_gradientn
@@ -61,11 +68,10 @@ scale_color_mn <- function(palette = "primary_extended",
                            reverse = FALSE,
                           ...) {
    if (discrete) {
-       discrete_scale("colour", "mn", palette=mn_pal(palette, alpha = alpha, reverse = reverse))
+       discrete_scale("colour", "mn", palette = mn_pal(palette, alpha = alpha, reverse = reverse))
    } else {
-       scale_color_gradientn(colours = mn_pal(palette, alpha = alpha, reverse = reverse, ...)(256))
+       scale_color_gradientn(colors = mn_pal(palette, alpha = alpha, reverse = reverse, ...)(256))
    }
-    #scale_colour_manual(values=mn_palettes[[palette]])
 }
 
 #' @rdname scale_color_mn
@@ -91,9 +97,9 @@ scale_fill_mn <- function(palette="primary_extended",
                           reverse = FALSE,
                           ...) {
     if (discrete) {
-        discrete_scale("fill", "mn", palette=mn_pal(palette, alpha = alpha, reverse = reverse))
+        discrete_scale("fill", "mn", palette = mn_pal(palette, alpha = alpha, reverse = reverse))
     }
     else {
-        scale_fill_gradientn(colours = mn_pal(palette, alpha = alpha, reverse = reverse, ...)(256))
+        scale_fill_gradientn(colors = mn_pal(palette, alpha = alpha, reverse = reverse, ...)(256))
     }
 }
